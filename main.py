@@ -20,4 +20,8 @@ def display_board():
     print(board[6] + " | " + board[7] + " | " + board[8])
 
 
-display_board()
+def play_game():
+    display_board()
+
+
+play_game()
