@@ -1,4 +1,4 @@
-# python-TIC-TAC-TOE
+# Tic-Tac-Toe in Python
 
 ### Project overview
 
