@@ -52,7 +52,7 @@ def handle_turn(player):
     position = input("Choose a position from 1-9: ")
     position = int(position) - 1
 
-    board[position] = "X"
+    board[position] = player
     display_board()
 
 
@@ -68,11 +68,11 @@ def check_for_winner():
     column_winner = check_columns()
     diagonal_winner = check_diagonals()
     if row_winner:
-        winner = row_winner()
+        winner = row_winner
     elif column_winner:
-        winner = column_winner()
+        winner = column_winner
     elif diagonal_winner:
-        winner = diagonal_winner()
+        winner = diagonal_winner
     else:
         winner = None
     return
@@ -128,6 +128,11 @@ def check_if_tie():
 
 
 def flip_player():
+    global current_player
+    if current_player == "X":
+        current_player = "O"
+    elif current_player == "O":
+        current_player = "X"
     return
 
 
